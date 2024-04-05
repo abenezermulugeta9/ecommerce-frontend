@@ -12,7 +12,11 @@
                         <div class="price">{{ product.unitPrice | currency: 'USD' }}</div>
                         <a href="#" class="primary-btn" style="text-decoration: none;">Add to cart</a>
                     </div>
+                </div>
 
+                <!-- if products empy then display a message -->
+                <div *ngIf="products?.length == 0" class="alert alert-warning col-md-12" role="alert">
+                    No products found.
                 </div>
             </div>
         </div>
